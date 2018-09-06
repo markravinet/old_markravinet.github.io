@@ -188,8 +188,8 @@ starwars %&gt;% select(starts_with(&quot;s&quot;))</code></pre>
 <pre class="r"><code>starwars %&gt;% filter(species == &quot;Human&quot;)</code></pre>
 <p>Notice we use the <code>%&gt;%</code> pipe again - the reason for this will hopefully become clear soon! You might be wondering at this point, that there doesn’t seem to be a huge difference between these two approaches, other than the way the code looks. Where the <code>filter</code> command really becomes useful is when you use it for multiple different variables.</p>
 <p>Let’s suppose we want to extract all individuals that are Human and that are from Tatooine as their homeworld. With baseR, we would do the following:</p>
-<pre class="r"><code>starwars[starwars$species == &quot;Human&quot; &amp; starwars$homeworld == &quot;Tatooine&quot;, ]</code></pre>
-<p>What about with <code>dplyr</code>? Well this would work:</p>
+<pre class="r"><code>starwars[which(starwars$species == &quot;Human&quot; &amp; starwars$homeworld == &quot;Tatooine&quot;), ]</code></pre>
+<p>Note that here, all <code>which</code> does is make sure we subset the <code>data.frame</code> properly. What about with <code>dplyr</code>? Well this would work:</p>
 <pre class="r"><code>starwars %&gt;% filter(species == &quot;Human&quot;, homeworld == &quot;Tatooine&quot;)</code></pre>
 <p>You can see how <code>dplyr</code> makes filtering on multiple variables much more straightforward and cleaner.</p>
 </div>
