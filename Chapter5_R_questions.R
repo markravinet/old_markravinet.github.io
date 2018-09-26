@@ -10,7 +10,7 @@
 # The easiest way to submit your work is use this R script as a template. You should show
 # your code. You should also show the answers using the hash (#) symbol to comment them
 # out.
-# 
+#
 # When you are finished, you can click, File>Save_as and alter the extension of the script
 # from .R to .txt - this will save it as a text file which you can then upload to Canvas.
 # We recommend you do this last of all, because it will destroy the syntax highlighting in
@@ -20,11 +20,11 @@
 
 ### 1. Imagine two populations. In population one, the A1 allele has the highest marginal fitness
 ###    whereas in population 2, the A2 allele has the highest marginal fitness. Directional selection
-###    occurs in both populations over 100 generations. What happens to the frequency of the alleles in 
-###    both populations? How would this alter Fst between them? 
+###    occurs in both populations over 100 generations. What happens to the frequency of the alleles in
+###    both populations? How would this alter Fst between them?
 
 ### 2. Imagine the same scenario, but this time balancing selection is occurring in both populations
-###    and it maintains the alleles at equal frequencies in both populations. How would this affect 
+###    and it maintains the alleles at equal frequencies in both populations. How would this affect
 ###    Fst?
 
 ### R-based questions
@@ -36,6 +36,8 @@
 ### a . Calculate the average expected heterozygosity for the two populations.
 
 ### b. Calculate the expected heterozygosity for the two populations as a metapopulation.
+
+### c. Calculate Fst between the lake and stream fish.
 
 ### 4. Using the calc_af and calc_fst functions we developed during the tutorial and the lct_freq
 ###    data, calculate Fst between the Han_China and the Swedish_and_Finnish_Scandinavia populations.
