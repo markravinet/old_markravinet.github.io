@@ -216,7 +216,7 @@ Pi_ij &lt;- c(2, 1, 1)
 # calculate the number of pairwise comparisons
 np &lt;- (n*(n-1))/2
 # calculate the nucleotide diversity
-Pi &lt;- sum(Pi_ij)/n</code></pre>
+Pi &lt;- sum(Pi_ij)/np</code></pre>
 <p>You can compare this to the calculations in Chapter 7 of the textbook - as they are essentially identical. So what we have here is the average number of nucleotide differences between our three sequences. This is <em>not</em> standardised to the sequence length, so we need to do that next.</p>
 <pre class="r"><code># calculate standarised nucleotide diversity
 L &lt;- 40
