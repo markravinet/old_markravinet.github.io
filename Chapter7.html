@@ -146,14 +146,8 @@ install.packages(&quot;pegas&quot;)</code></pre>
 rm(list = ls())
 library(tidyverse)
 library(ape)
-library(pegas)</code></pre>
-<pre><code>## Warning: package 'pegas' was built under R version 3.4.4</code></pre>
-<pre><code>## Warning: package 'adegenet' was built under R version 3.4.3</code></pre>
-<pre><code>## Warning: package 'ade4' was built under R version 3.4.3</code></pre>
-<pre class="r"><code>library(PopGenome)</code></pre>
-<pre><code>## Warning: package 'PopGenome' was built under R version 3.4.4</code></pre>
-<pre><code>## Warning: package 'ff' was built under R version 3.4.4</code></pre>
-<pre><code>## Warning: package 'bit' was built under R version 3.4.4</code></pre>
+library(pegas)
+library(PopGenome)</code></pre>
 <p>Remember that clearing the R environment when you start a script is good practice to make sure you don’t have any conflicts with previously loaded data. All three packages <a href="http://ape-package.ird.fr/"><code>ape</code></a>, <a href="http://ape-package.ird.fr/pegas.html"><code>pegas</code></a> and <a href="https://popgenome.weebly.com/"><code>PopGenome</code></a> are really useful for handling genetic data in R - follow the links for more information about each of them.</p>
 </div>
 </div>
@@ -290,15 +284,16 @@ tajima.test(woodmouse)</code></pre>
 <p>The data comes in two parts. We’ll deal with the actual SNP data first. This is stored in a file called a VCF, which stands for <a href="https://samtools.github.io/hts-specs/VCFv4.2.pdf">variant call format</a>. This is a standard file format for storing SNP data and is produced by a lot of SNP calling pipelines. It is beyond the scope of todays tutorial to go into much detail about VCF files - all you really need to do today is understand that it is a format we need to read in to R in order to work with the SNP data.</p>
 <p>One thing you should know about VCF files though is that they can quickly become very very big. The one we are using today is a much smaller, randomly sampled version of the true dataset <strong>from a single chromosome only</strong>, however it is still quite a large file size. Because it is large, the file is compressed and there are some preprocessing steps you will need to do before you can open in it in R.</p>
 <ul>
-<li>First, download th <a href="https://markravinet.github.io/sparrow_chr8_downsample.vcf.gz">VCF</a></li>
+<li>First, download the <a href="https://markravinet.github.io/sparrow_chr8_downsample.vcf.gz">VCF</a></li>
 <li>Next, make a directory in your working directory (use <code>getwd</code> if you don’t know where that is) and call it <code>sparrow_snps</code></li>
-<li>Move the downloaded VCF into this new directory and then uncompress it.</li>
+<li>Move the downloaded VCF into this new directory and then uncompress it. If you do not have an program for this, you can either use the <a href="https://theunarchiver.com/">Unarchiver</a> (Mac OS X) or <a href="https://www.7-zip.org/">7zip</a> (Windows).</li>
 <li>Make sure <strong>only</strong> the uncompressed file is present in the directory.</li>
 </ul>
 <p>With these steps carried out, you can then easily read this data in like so:</p>
 <pre class="r"><code>sparrows &lt;- readData(&quot;./sparrow_snps/&quot;, format = &quot;VCF&quot;, include.unknown = TRUE, FAST = TRUE)</code></pre>
 <pre><code>## |            :            |            :            | 100 %
 ## |====================================================</code></pre>
+<p><strong>N.B This command does not always work on Windows machines.</strong> If you are using Windows, you might need to change the path to <code>&quot;./sparrow_snps&quot;</code> - i.e. so it is missing the last backslash.</p>
 <p>First, we point the <code>readData</code> function at the directory where our decompressed VCF is. The following arguments are: * <code>format = VCF</code> function to tell it is a VCF (since <code>PopGenome</code> can read in other file types).<br />
 <em><code>include.unknown = TRUE</code> this is just an argument to <code>readData</code> to let it know that any SNPs where there are unknown calls should be included. We need this as not all individuals have data for each site. </em> <code>FAST = TRUE</code> to tell the function we want it to use fast computation.</p>
 <p>So we just read a variant data from an entire chromsome into R. Before we move on, let’s take a look at what we have actually created with our <code>sparrows</code> object. If you call the <code>sparrows</code> object, you will not really see anything that informative, since it is a very complex data structure. However with the <code>get.sum.data</code> function, we can learn a bit more about it.</p>
