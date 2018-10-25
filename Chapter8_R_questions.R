@@ -19,7 +19,8 @@
 ## 1. How far is the distance between the final 100 Kb/25 Kb jump window and the end of chr8?
 
 ## 2. Generate a set of 10 Kb sliding windows with 5000 bp jump for the sparrow chromosome 8. How many windows does this generate?
-##    How far is the final window from the end of the chromosome?
+##    How far is the final window from the end of the chromosome? Note: you should not use these windows in the later analysis you
+##    will conduct on the sparrows dataset - so pro tip, call the variables something else (like windows2)
 
 ## 3. Calculate the mean pairwise Fst and also the mean pairwise dxy for all of the different species comparisons
 ###   N.B. if you use a tidyverse solution, it may be easier to use t() to transpose and see the final result
