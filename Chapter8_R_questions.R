@@ -24,7 +24,7 @@
 ## 3. Calculate the mean pairwise Fst and also the mean pairwise dxy for all of the different species comparisons
 ###   N.B. if you use a tidyverse solution, it may be easier to use t() to transpose and see the final result
 
-## 4. Following on from question 2, use ggplot and geom_boxplot to visualise the distribution in these variables
+## 4. Following on from question 3, use ggplot and geom_boxplot to visualise the distribution in these variables
 ##    NB: To rotate axis labels in ggplot, add the following: 
 ##    + theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5))
 
