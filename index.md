@@ -28,5 +28,11 @@ A guide to setting thresholds for GATK filters is [here](https://markravinet.git
 
 I would highly, highly recommend [this](http://musicforprogramming.net/) as a way to break through the drudgery of coding.
 
+## NORD Population Genomics Course - Bodø 2020
 
+The exercises for the course are here:
 
+- [Inferring selection - part 1](inferring_selection_part1.md)
+- [Inferring selection - part 2](inferring_selection_part2.md)
+- [Inferring selection - part 3](inferring_selection_part3.md)
+- [Detecting introgression](Detecting_introgression.md)
