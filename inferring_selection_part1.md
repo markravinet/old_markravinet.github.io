@@ -1,8 +1,4 @@
----
-title: "Inferring selection in the genome - part 1"
-layout: archive
-permalink: /sliding_windows/
----
+# Inferring selection in the genome - part 1
 
 There are many different ways to detect regions under divergent selection. In this tutorial, we are going to compute three of them in sliding genomic windows:
 - pi, a measure of genetic variation

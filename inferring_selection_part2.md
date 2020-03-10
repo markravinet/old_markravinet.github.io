@@ -1,8 +1,4 @@
----
-title: "Inferring selection in the genome - part 2"
-layout: archive
-permalink: /sliding_windows/
----
+# Inferring selection in the genome - part 2
 
 ### Going further - using haplotype statistics
 
