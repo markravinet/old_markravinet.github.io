@@ -1,4 +1,4 @@
-# Inferring selection in the genome - part 2
+# Inferring selection in the genome - part 2
 
 ### Going further - using haplotype statistics
 

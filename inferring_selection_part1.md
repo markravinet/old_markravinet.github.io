@@ -1,9 +1,9 @@
-# Inferring selection in the genome - part 1
+# Inferring selection in the genome - part 1
 
 There are many different ways to detect regions under divergent selection. In this tutorial, we are going to compute three of them in sliding genomic windows:
 - pi, a measure of genetic variation
-- Fst, a measure of genomic differentiation
-- dxy, a measure of absolute divergence
+- *F*<sub>ST</sub> - a measure of genomic differentiation
+- *d*<sub>XY</sub> - a measure of absolute divergence
 
 Note that dxy *d*<sub>XY</sub> and pi require monomorphic sites to be present in the dataset, whereas  *F*<sub>ST</sub> is only computed on bi-allelic sites. It is thus important to filter out indels and multi-allelic sites and to keep monomorphic sites (i.e. do not apply an maf filter).
 

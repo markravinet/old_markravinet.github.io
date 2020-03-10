@@ -1,4 +1,4 @@
-# Inferring selection in the genome - part 3
+# Inferring selection in the genome - part 3
 
 Now that we have SNPs that we think might be under selection, we can take the next step to identify what the genes lying close those SNPs. We will do this entirely in `R`.
 
